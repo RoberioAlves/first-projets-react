@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Background from './assests/background1.svg'
+import Background from '../../assests/background1.svg'
 
 
 export const Container = styled.div`
@@ -76,6 +76,7 @@ export const Button = styled.button`
     line-height: 28px;
     cursor: pointer;
     padding:20px;
+    margin-top: 70px;
     
     &:hover {
         opacity:0.8
@@ -95,33 +96,7 @@ export const H1 = styled.h1`
     
 `;
 
-export const User = styled.li`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: none;
-    outline: none;
-    background: rgba(255, 255, 255, 0.25);
-    width: 342px;
-    height: 58px;
-    padding: 15px 20px 15px 25px;
-    border-radius: 14px;
-    margin-top: 20px;
 
-    p {
-    color: rgba(238, 238, 238, 1);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 22px;
-    }
-
-    button {
-        background: none;
-        cursor: pointer;
-        border: none;
-    }
-`;
 
 
 
