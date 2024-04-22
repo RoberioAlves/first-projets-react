@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-    export default createGlobalStyle`
+export default createGlobalStyle`
 
 * {
 
@@ -8,6 +8,7 @@ import { createGlobalStyle } from 'styled-components'
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    text-decoration: none;
 
 }
 

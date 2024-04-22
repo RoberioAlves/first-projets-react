@@ -15,20 +15,6 @@ export const Imagen = styled.img`
     margin-top: 30px;
 `;
 
-export const ContainerItens = styled.div`
-    background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.84%, rgba(255, 255, 255, 0.6) 0.85%, rgba(255, 255, 255, 0.15) 100%);
-    width: 414px;
-    height: 645px;
-    top: 251px;
-    gap: 0px;
-    border-radius: 61px 61px 0px 0px;
-    opacity: 0px;
-    padding: 50px 40px;
-    display: flex;
-    flex-direction: column;
-
-`;
-
 export const InputLabel = styled.p`
 color: rgba(238, 238, 238, 1);
 font-size: 18px;
@@ -85,16 +71,7 @@ export const Button = styled.button`
         opacity:0.5
     }
 `;
-export const H1 = styled.h1`
-    color: rgba(255, 255, 255, 1);
-    margin-bottom: 80px;
-    text-align: center;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 39.84px;
-    text-align: center;
-    
-`;
+
 
 
 

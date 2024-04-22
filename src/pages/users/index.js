@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Avatar from '../../assests/avatar.svg'
 import Arrow from '../../assests/arrow.svg'
 import Trash from '../../assests/trash.svg'
+import H1 from '../../components/Titles'
+import ContainerItens from '../../components/pagesitens'
 
-import { Container, H1, Button, ContainerItens, Imagen, User } from './styles'
+import { Container, Button, Imagen, User } from './styles'
 
 //JSX
 const Users = () => {
 
   const [users, setUsers] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
-    async function fetchsers(){
-      const { data: newUsers }  = await axios.get("http://localhost:3001/users");
+    async function fetchsers() {
+      const { data: newUsers } = await axios.get("http://localhost:3001/users");
 
-    setUsers(newUsers);
+      setUsers(newUsers);
     }
-  
+
     fetchsers()
 
   }, []);
@@ -28,10 +31,14 @@ const Users = () => {
     setUsers(newUsers)
   }
 
+  function goBackPage() {
+    navigate('/')
+  }
+
   return (
     <Container>
       <Imagen alt='Logo-imagem' src={Avatar} />
-      <ContainerItens>
+      <ContainerItens isBlur={true}>
         <H1>Usuários</H1>
 
         <ul>
@@ -46,8 +53,8 @@ const Users = () => {
           }
         </ul>
 
-        <Button > <img alt='Seta' src={Arrow}/> Voltar </Button>
-        
+        <Button onClick={goBackPage} > <img alt='Seta' src={Arrow} /> Voltar </Button>
+
       </ContainerItens>
     </Container>)
 }
